@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Ativa a rolagem suave em todo o site */
 html {
     scroll-behavior: smooth;
