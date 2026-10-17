@@ -1,0 +1,238 @@
+/* Ativa a rolagem suave em todo o site */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo span {
+    color: #f85149;
+}
+
+.nav a {
+    color: #8b949e;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+    /* Transição suave no menu */
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #161b22, #0d1117);
+}
+
+/* Estilo para a Foto de Perfil no Hero */
+.profile-pic {
+    width: 150px;
+    /* Tamanho da foto (largura) */
+    height: 150px;
+    /* Tamanho da foto (altura) - deve ser igual à largura para um círculo perfeito */
+    border-radius: 50%;
+    /* Faz a imagem ficar perfeitamente circular */
+    object-fit: cover;
+    /* Garante que a foto preencha o círculo sem distorcer, cortando as bordas se necessário */
+    border: 4px solid #161b22;
+    /* Adiciona uma borda sutil ao redor da foto */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    /* Adiciona uma sombra suave para dar profundidade */
+    margin-bottom: 1.5rem;
+    /* Espaçamento entre a foto e o nome */
+    transition: transform 0.3s ease;
+    /* Transição suave para um efeito no hover (opcional) */
+}
+
+/* Efeito opcional ao passar o mouse na foto */
+.profile-pic:hover {
+    transform: scale(1.05);
+    /* A foto aumenta levemente ao passar o mouse */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.destaque {
+    color: #f85149;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #8b949e;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    /* Efeito sutil de transição ao passar o mouse ou clicar */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito leve de profundidade ao clicar no botão */
+.hero-buttons .btn:active {
+    transform: scale(0.97);
+}
+
+.btn.primary {
+    background-color: #238636;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background-color: #2ea043;
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+    /* Sombra suave */
+}
+
+.btn.secondary {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+.btn.secondary:hover {
+    background-color: #30363d;
+    color: #fff;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 5rem 10%;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 1.5rem;
+    /* Transição suave nos cards de projetos */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b949e;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    /* Sombra elegante no hover */
+}
+
+.project-card h3 {
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.project-card p {
+    color: #8b949e;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.tags {
+    margin-bottom: 1.5rem;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #21262d;
+    color: #58a6ff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    margin-right: 0.4rem;
+    border: 1px solid #30363d;
+}
+
+.project-links a {
+    color: #c9d1d9;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+    color: #58a6ff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2.5rem;
+    background-color: #161b22;
+    border-top: 1px solid #30363d;
+    color: #8b949e;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #8b949e;
+    font-size: 1.2rem;
+    margin: 0 0.8rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    /* Pequeno pulo sutil no ícone */
+}
